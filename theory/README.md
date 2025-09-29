@@ -1,8 +1,8 @@
-# Parte Teórica
+# Parte Teórica ✨
 
 Essa é a parte teórica do desafio de código no qual concentra-se as questões envolvendo algoritmos e estruturas de dados. Além disso, é possível encontrar as questões envolvendo banco de dados e SQL.
 
-## Algoritmos e Estruturas de Dados
+## 🧮 Algoritmos e Estruturas de Dados
 
 Na pasta [questions](./questions) você encontrará questões práticas que envolvem algoritmos e estruturas de dados. Cada questão está em um arquivo TypeScript separado, com uma função que tem seu teste unitário correspondente.
 
@@ -22,7 +22,7 @@ bun test
 
 Os testes foram escritos em português para facilitar o entendimento e a escolha dos algoritmos foi pensada para equilibrar eficiência e simplicidade, considerando o contexto de cada questão.
 
-## Banco de dados e SQL
+## 🎲 Banco de dados e SQL
 
 Na pasta [database](./database) você encontrará questões práticas que envolvem banco de dados e SQL. Cada questão está em um arquivo `.sql` separado e o arquivo principal da questão está nomeado como `1.init.sql`.
 

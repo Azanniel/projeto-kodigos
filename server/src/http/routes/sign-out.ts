@@ -10,8 +10,8 @@ export const signOut = new Elysia().use(auth).post(
 	{
 		tags: ['Auth'],
 		detail: {
-			summary: 'Sign out a user',
-			description: 'Sign out a user and remove the JWT token from the cookie.',
+			summary: 'Sign Out',
+			description: 'Sign out and remove the JWT token from the cookie.',
 		},
 		response: {
 			204: t.Void(),

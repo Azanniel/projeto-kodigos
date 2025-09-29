@@ -35,9 +35,9 @@ export const signIn = new Elysia().use(auth).post(
 	{
 		tags: ['Auth'],
 		detail: {
-			summary: 'Sign in a user',
+			summary: 'Sign In',
 			description:
-				'Sign in a user with email and password. This will set cookie with JWT token.',
+				'Sign in with email and password. This will set cookie with JWT token.',
 		},
 		body: t.Object({
 			email: t.String({ format: 'email' }),

@@ -1,0 +1,26 @@
+{
+	"name": "nodus",
+	"version": "0.0.1",
+	"module": "src/http/server.js",
+	"scripts": {
+		"dev": "bun run --watch src/http/server.ts",
+		"db:generate": "bunx --bun drizzle-kit generate",
+		"db:migrate": "bunx --bun drizzle-kit migrate",
+		"db:seed": "bun src/db/seed.ts",
+		"db:studio": "bunx --bun drizzle-kit studio",
+		"lint": "biome check"
+	},
+	"dependencies": {
+		"@elysiajs/jwt": "^1.4.0",
+		"@elysiajs/openapi": "^1.4.11",
+		"drizzle-orm": "^0.44.5",
+		"drizzle-seed": "^0.3.1",
+		"elysia": "latest",
+		"postgres": "^3.4.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"bun-types": "latest",
+		"drizzle-kit": "^0.31.5"
+	}
+}

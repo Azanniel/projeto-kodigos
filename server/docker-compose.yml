@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: nodus-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nodus
+    ports:
+      - "5432:5432"
+    volumes:
+      - nodus_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  nodus_postgres_data:
+    driver: local

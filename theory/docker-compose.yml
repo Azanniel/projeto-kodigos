@@ -1,0 +1,32 @@
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: theory-mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=theory_database
+      - MYSQL_USER=theory_user
+      - MYSQL_PASSWORD=theory_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - theory_db_data:/var/lib/mysql
+      - ./database/1.init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: theory-phpmyadmin
+    restart: always
+    environment:
+      - PMA_HOST=theory-mariadb
+      - PMA_PORT=3306
+      - PMA_USER=theory_user
+      - PMA_PASSWORD=theory_password
+    ports:
+      - "8080:80"
+    depends_on:
+      - mariadb
+
+volumes:
+  theory_db_data:
